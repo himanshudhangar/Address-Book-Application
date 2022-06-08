@@ -28,7 +28,7 @@ public class AddressBookController {
         return new ResponseEntity<String>("Updated Addressbook for : "+ addressbook, HttpStatus.OK);
     }
 
-    @DeleteMapping("/deleteAddressbookAddressbook/{id}")
+    @DeleteMapping("/deleteAddressbook/{id}")
     public ResponseEntity<String> deleteAddressbookInfo(@PathVariable  int id ){
         return new ResponseEntity<String>("Delete call Success for Id : "+ id, HttpStatus.OK);
     }
