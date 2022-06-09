@@ -3,7 +3,6 @@ package com.bridgelabz.addressbookapp.service;
 
 import com.bridgelabz.addressbookapp.dto.AddressBookDTO;
 import com.bridgelabz.addressbookapp.model.AddressBookData;
-
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,36 +10,44 @@ import java.util.List;
 
 @Service
 public class AddressBookService implements IAddressBookService {
+
+    List<AddressBookData> addressbookDataList = new ArrayList<>();
+
     @Override
     public List<AddressBookData> getAddressbookData() {
-        List<AddressBookData> addressbookDataList = new ArrayList<>();
-        addressbookDataList.add(new AddressBookData(1,new AddressBookDTO("Himanshu","7411949218")));
         return addressbookDataList;
     }
 
     @Override
     public AddressBookData getAddressbookDataById(int personId) {
-        AddressBookData addressbookData =  null;
-        addressbookData = new AddressBookData(personId,new AddressBookDTO("Himanshu","12345678"));
+        AddressBookData addressbookData = null;
+        addressbookData = addressbookDataList.get(personId - 1);
         return addressbookData;
     }
 
     @Override
     public AddressBookData createAddressbooData(AddressBookDTO addressbookDTO) {
         AddressBookData addressbookData = null;
-        addressbookData = new AddressBookData(1,addressbookDTO);
+        addressbookData = new AddressBookData(addressbookDataList.size() + 1, addressbookDTO);
+        addressbookDataList.add(addressbookData);
         return addressbookData;
     }
 
     @Override
-    public AddressBookData updateAddressbookData(int personId,AddressBookDTO addressbookDTO) {
-        AddressBookData addressbookData = null;
-        addressbookData = new AddressBookData(personId,addressbookDTO);
+    public AddressBookData updateAddressbookData(int personId, AddressBookDTO addressbookDTO) {
+        AddressBookData addressbookData = this.getAddressbookDataById(personId);
+        addressbookData.setName(addressbookDTO.name);
+        addressbookData.setPhNumber(addressbookDTO.phNumber);
+        addressbookDataList.set(personId - 1, addressbookData);
         return addressbookData;
     }
 
     @Override
     public void deleteAddressbooData(int personId) {
-
+        int i = 1;
+        addressbookDataList.remove(personId - 1);
+        for (AddressBookData addressbookData : addressbookDataList) {
+            addressbookData.setPersonId(i++);
+        }
     }
 }
