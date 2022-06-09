@@ -1,12 +1,14 @@
+/**
+ * ResponseDTO.java
+ */
 package com.bridgelabz.addressbookapp.dto;
 
-import lombok.Data;
-import lombok.ToString;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@ToString
+@Getter
+@Setter
 public class ResponseDTO {
-
     private String message;
     private Object data;
 

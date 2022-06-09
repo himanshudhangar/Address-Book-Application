@@ -1,22 +1,19 @@
 package com.bridgelabz.addressbookapp.dto;
 
-import lombok.Data;
-import lombok.ToString;
-
-@ToString
-@Data
 public class AddressBookDTO {
+    public String name;
+    public String phNumber;
 
-    public String firstName;
+    public AddressBookDTO(String name, String phNumber) {
+        this.name = name;
+        this.phNumber = phNumber;
+    }
 
-    public String lastName;
-
-    public long zipCode;
-
-    public String state;
-
-    public String city;
-
-    public long phoneNumber;
-
+    @Override
+    public String toString() {
+        return "AddressbookDTO{" +
+                "name='" + name + '\'' +
+                ", phNumber=" + phNumber +
+                '}';
+    }
 }

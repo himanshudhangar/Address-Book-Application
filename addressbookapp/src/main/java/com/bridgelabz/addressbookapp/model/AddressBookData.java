@@ -1,25 +1,19 @@
 package com.bridgelabz.addressbookapp.model;
 
-import lombok.Data;
-import lombok.ToString;
+import com.bridgelabz.addressbookapp.dto.AddressBookDTO;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@ToString
+@Getter
+@Setter
 public class AddressBookData {
+    private int personId;
+    private String name;
+    private String phNumber;
 
-
-    private int id;
-
-    private String firstName;
-
-    private String lastName;
-
-    private long zipCode;
-
-    private String state;
-
-    private String city;
-
-    private long phoneNumber;
-
+    public AddressBookData(int personId, AddressBookDTO addressbookDTO) {
+        this.personId = personId;
+        this.name = addressbookDTO.name;
+        this.phNumber = addressbookDTO.phNumber;
+    }
 }
