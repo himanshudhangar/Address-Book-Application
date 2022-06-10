@@ -1,5 +1,6 @@
 package com.bridgelabz.addressbookapp.excepation;
 
+
 import com.bridgelabz.addressbookapp.dto.ResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +13,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @ControllerAdvice
-public class AddressBookExcepationHandler{
+public class AddressBookExcepationHandlers {
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ResponseDTO> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception){
         List<ObjectError> errorList= exception.getBindingResult().getAllErrors();
@@ -21,5 +23,11 @@ public class AddressBookExcepationHandler{
                 .collect(Collectors.toList());
         ResponseDTO responseDTO = new ResponseDTO("Exception While processing REST Request",errMesg);
         return new ResponseEntity<>(responseDTO, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(AddressbookExcepation.class)
+    public ResponseEntity<ResponseDTO> handleMethodAddressbookException(AddressbookExcepation exception){
+        ResponseDTO responseDTO = new ResponseDTO("Exception While processing REST Request",exception.getMessage());
+        return new ResponseEntity<>(responseDTO,HttpStatus.BAD_REQUEST);
     }
 }
