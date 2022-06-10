@@ -4,3 +4,37 @@
 2022-06-10 02:25:55.356  WARN 4232 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2022-06-10 02:25:57.589  INFO 4232 --- [main] c.b.a.AddressbookappApplication          : Started AddressbookappApplication in 25.786 seconds (JVM running for 29.854)
 2022-06-10 02:25:57.604  INFO 4232 --- [main] c.b.a.AddressbookappApplication          : Addressbook App started
+2022-06-10 02:56:57.870  INFO 9324 --- [main] c.b.a.AddressbookappApplication          : Starting AddressbookappApplication using Java 1.8.0_301 on DESKTOP-RFK6RG2 with PID 9324 (D:\CFE_Springboot\AddressBook-App\addressbookapp\target\classes started by com in D:\CFE_Springboot\AddressBook-App)
+2022-06-10 02:56:57.881 DEBUG 9324 --- [main] c.b.a.AddressbookappApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-10 02:56:57.884  INFO 9324 --- [main] c.b.a.AddressbookappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-06-10 02:57:23.488  WARN 9324 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-10 02:57:25.237  INFO 9324 --- [main] c.b.a.AddressbookappApplication          : Started AddressbookappApplication in 31.854 seconds (JVM running for 36.004)
+2022-06-10 02:57:25.255  INFO 9324 --- [main] c.b.a.AddressbookappApplication          : Addressbook App started
+2022-06-10 11:11:49.463  INFO 3296 --- [main] c.b.a.AddressbookappApplication          : Starting AddressbookappApplication using Java 1.8.0_301 on DESKTOP-RFK6RG2 with PID 3296 (D:\CFE_Springboot\AddressBook-App\addressbookapp\target\classes started by com in D:\CFE_Springboot\AddressBook-App)
+2022-06-10 11:11:49.471 DEBUG 3296 --- [main] c.b.a.AddressbookappApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-10 11:11:49.474  INFO 3296 --- [main] c.b.a.AddressbookappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-06-10 11:12:02.527  WARN 3296 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-10 11:12:03.795  INFO 3296 --- [main] c.b.a.AddressbookappApplication          : Started AddressbookappApplication in 17.559 seconds (JVM running for 24.683)
+2022-06-10 11:12:03.802  INFO 3296 --- [main] c.b.a.AddressbookappApplication          : Addressbook App started
+2022-06-10 11:27:08.498  INFO 7224 --- [main] c.b.a.AddressbookappApplication          : Starting AddressbookappApplication using Java 1.8.0_301 on DESKTOP-RFK6RG2 with PID 7224 (D:\CFE_Springboot\AddressBook-App\addressbookapp\target\classes started by com in D:\CFE_Springboot\AddressBook-App)
+2022-06-10 11:27:08.507 DEBUG 7224 --- [main] c.b.a.AddressbookappApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-10 11:27:08.509  INFO 7224 --- [main] c.b.a.AddressbookappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-06-10 11:27:19.191  WARN 7224 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-10 11:27:20.318  INFO 7224 --- [main] c.b.a.AddressbookappApplication          : Started AddressbookappApplication in 14.649 seconds (JVM running for 16.915)
+2022-06-10 11:27:20.325  INFO 7224 --- [main] c.b.a.AddressbookappApplication          : Addressbook App started
+2022-06-10 11:43:09.498  INFO 9180 --- [main] c.b.a.AddressbookappApplication          : Starting AddressbookappApplication using Java 1.8.0_301 on DESKTOP-RFK6RG2 with PID 9180 (D:\CFE_Springboot\AddressBook-App\addressbookapp\target\classes started by com in D:\CFE_Springboot\AddressBook-App)
+2022-06-10 11:43:09.513 DEBUG 9180 --- [main] c.b.a.AddressbookappApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-10 11:43:09.516  INFO 9180 --- [main] c.b.a.AddressbookappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-06-10 11:43:29.236  WARN 9180 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-10 11:43:32.020  INFO 9180 --- [main] c.b.a.AddressbookappApplication          : Started AddressbookappApplication in 26.52 seconds (JVM running for 30.072)
+2022-06-10 11:43:32.033  INFO 9180 --- [main] c.b.a.AddressbookappApplication          : Addressbook App Started in null Environment
+2022-06-10 11:43:32.074  INFO 9180 --- [main] c.b.a.AddressbookappApplication          : Employee Payroll DB User is root
+2022-06-10 11:43:32.075  INFO 9180 --- [main] c.b.a.AddressbookappApplication          : Addressbook App started
+2022-06-10 11:46:45.608  INFO 3372 --- [main] c.b.a.AddressbookappApplication          : Starting AddressbookappApplication using Java 1.8.0_301 on DESKTOP-RFK6RG2 with PID 3372 (D:\CFE_Springboot\AddressBook-App\addressbookapp\target\classes started by com in D:\CFE_Springboot\AddressBook-App)
+2022-06-10 11:46:45.657 DEBUG 3372 --- [main] c.b.a.AddressbookappApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-10 11:46:45.659  INFO 3372 --- [main] c.b.a.AddressbookappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-06-10 11:47:08.824  WARN 3372 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-10 11:47:11.297  INFO 3372 --- [main] c.b.a.AddressbookappApplication          : Started AddressbookappApplication in 30.389 seconds (JVM running for 33.016)
+2022-06-10 11:47:11.308  INFO 3372 --- [main] c.b.a.AddressbookappApplication          : Addressbook App Started in null Environment
+2022-06-10 11:47:11.314  INFO 3372 --- [main] c.b.a.AddressbookappApplication          : AddressBook App DB User is root
+2022-06-10 11:47:11.316  INFO 3372 --- [main] c.b.a.AddressbookappApplication          : Addressbook App started
