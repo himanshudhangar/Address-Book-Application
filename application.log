@@ -180,3 +180,11 @@ java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.63.jar:9.0.63]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_301]
 
+2022-06-11 01:18:15.795  INFO 13264 --- [main] c.b.a.AddressbookappApplication          : Starting AddressbookappApplication using Java 1.8.0_301 on DESKTOP-RFK6RG2 with PID 13264 (D:\CFE_Springboot\AddressBook-App\addressbookapp\target\classes started by com in D:\CFE_Springboot\AddressBook-App)
+2022-06-11 01:18:15.825 DEBUG 13264 --- [main] c.b.a.AddressbookappApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-06-11 01:18:15.827  INFO 13264 --- [main] c.b.a.AddressbookappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-06-11 01:18:28.271  WARN 13264 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-11 01:18:29.658  INFO 13264 --- [main] c.b.a.AddressbookappApplication          : Started AddressbookappApplication in 17.032 seconds (JVM running for 19.321)
+2022-06-11 01:18:29.667  INFO 13264 --- [main] c.b.a.AddressbookappApplication          : Addressbook App Started in null Environment
+2022-06-11 01:18:29.671  INFO 13264 --- [main] c.b.a.AddressbookappApplication          : AddressBook App DB User is root
+2022-06-11 01:18:29.672  INFO 13264 --- [main] c.b.a.AddressbookappApplication          : Addressbook App started

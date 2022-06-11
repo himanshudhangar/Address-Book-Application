@@ -11,9 +11,9 @@ public interface IAddressBookService {
 
     AddressBookData getAddressbookDataById(int personId);
 
-    AddressBookData createAddressbooData(AddressBookDTO addressbookDTO);
+    AddressBookData createAddressbookData(AddressBookDTO addressbookDTO);
 
     AddressBookData updateAddressbookData(int personId,AddressBookDTO addressbookDTO);
 
-    void deleteAddressbooData(int personId);
+    void deleteAddressbookData(int personId);
 }

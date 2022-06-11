@@ -1,6 +1,5 @@
 package com.bridgelabz.addressbookapp.controller;
 
-
 import com.bridgelabz.addressbookapp.dto.AddressBookDTO;
 import com.bridgelabz.addressbookapp.dto.ResponseDTO;
 import com.bridgelabz.addressbookapp.model.AddressBookData;
@@ -18,12 +17,12 @@ import java.util.List;
 public class AddressBookController {
 
     @Autowired
-    IAddressBookService addressbooService;
+    IAddressBookService addressbookService;
 
     @RequestMapping(value = {"", "/", "/get"})
-    public ResponseEntity<ResponseDTO> getAddressbookData() {
+    public ResponseEntity<ResponseDTO> getAddressBookData() {
         List<AddressBookData> addressbookDataList = null;
-        addressbookDataList = addressbooService.getAddressbookData();
+        addressbookDataList = addressbookService.getAddressbookData();
         ResponseDTO responseDTO = new ResponseDTO("Get call success",addressbookDataList);
         return new ResponseEntity<>(responseDTO,HttpStatus.OK);
     }
@@ -31,7 +30,7 @@ public class AddressBookController {
     @GetMapping("/get/{personId}")
     public ResponseEntity<ResponseDTO> getAddressbookData(@PathVariable(value = "personId") int personId) {
         AddressBookData addressbookData = null;
-        addressbookData = addressbooService.getAddressbookDataById(personId);
+        addressbookData = addressbookService.getAddressbookDataById(personId);
         ResponseDTO responseDTO = new ResponseDTO("Get Call Success for id is successfully",addressbookData);
         return new ResponseEntity<>(responseDTO,HttpStatus.OK);
     }
@@ -39,22 +38,22 @@ public class AddressBookController {
     @PostMapping("/create")
     public ResponseEntity<ResponseDTO> addAddressbookData(@Valid @RequestBody AddressBookDTO addressbookDTO) {
         AddressBookData addressbookData = null;
-        addressbookData = addressbooService.createAddressbooData(addressbookDTO);
-        ResponseDTO responseDTO = new ResponseDTO("Created Employee Payroll Data successfully ",addressbookData);
+        addressbookData = addressbookService.createAddressbookData(addressbookDTO);
+        ResponseDTO responseDTO = new ResponseDTO("Created Address Book Data successfully ",addressbookData);
         return new ResponseEntity<>(responseDTO,HttpStatus.OK);
     }
 
     @PutMapping("/update/{personId}")
     public ResponseEntity<ResponseDTO> updateAddressbookData(@PathVariable int personId,@Valid @RequestBody AddressBookDTO addressbookDTO){
         AddressBookData addressbookData = null;
-        addressbookData = addressbooService.updateAddressbookData(personId,addressbookDTO);
-        ResponseDTO responseDTO = new ResponseDTO("Updated Employee Payroll data successfully ",addressbookData);
+        addressbookData = addressbookService.updateAddressbookData(personId,addressbookDTO);
+        ResponseDTO responseDTO = new ResponseDTO("Updated Address Book data successfully ",addressbookData);
         return new ResponseEntity<>(responseDTO,HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{personId}")
     public ResponseEntity<ResponseDTO> deleteAddressbookData(@PathVariable("personId") int personId) {
-        addressbooService.deleteAddressbooData(personId);
+        addressbookService.deleteAddressbookData(personId);
         ResponseDTO responseDTO = new ResponseDTO("Deleted data successfully","person id: "+personId);
         return new ResponseEntity<>(responseDTO,HttpStatus.OK);
     }
