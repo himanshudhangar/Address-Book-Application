@@ -26,14 +26,10 @@ public class AddressBookData {
     private String email;
 
 
-    public AddressBookData(int personId, AddressBookDTO addressbookDTO) {
-        this.personId = personId;
-        this.updateAddressBookdata(addressbookDTO);
-    }
     public AddressBookData() {
     }
 
-    public void updateAddressBookdata(AddressBookDTO addressbookDTO) {
+    public AddressBookData(AddressBookDTO addressbookDTO) {
         this.firstName = addressbookDTO.firstName;
         this.lastName = addressbookDTO.lastName;
         this.city = addressbookDTO.city;

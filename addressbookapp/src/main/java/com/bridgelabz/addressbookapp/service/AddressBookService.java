@@ -4,7 +4,6 @@ import com.bridgelabz.addressbookapp.dto.AddressBookDTO;
 import com.bridgelabz.addressbookapp.excepation.AddressbookExcepation;
 import com.bridgelabz.addressbookapp.model.AddressBookData;
 import com.bridgelabz.addressbookapp.repository.AddressBookRepository;
-import com.bridgelabz.addressbookapp.service.IAddressBookService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,17 +36,21 @@ public class AddressBookService implements IAddressBookService {
     @Override
     public AddressBookData createAddressbookData(AddressBookDTO addressbookDTO) {
         AddressBookData addressbookData = null;
-        addressbookData = new AddressBookData(addressbookDataList.size() + 1, addressbookDTO);
+        addressbookData = new AddressBookData (addressbookDTO);
         log.debug("AddressbookData: "+addressbookData.toString());
-        addressbookDataList.add(addressbookData);
         return addressbookRepository.save(addressbookData);
     }
 
     @Override
-    public AddressBookData updateAddressbookData(int personId, AddressBookDTO addressbookDTO) {
-        AddressBookData addressbookData = this.getAddressbookDataById(personId);
-        addressbookData.updateAddressBookdata(addressbookDTO);
-        addressbookDataList.set(personId - 1, addressbookData);
+    public AddressBookData updateAddressbookData(int id, AddressBookDTO addressbookDTO) {
+        AddressBookData addressbookData = this.getAddressbookDataById(id);
+        addressbookData.setFirstName(addressbookDTO.firstName);
+        addressbookData.setLastName(addressbookDTO.lastName);
+        addressbookData.setState(addressbookDTO.state);
+        addressbookData.setCity(addressbookDTO.city);
+        addressbookData.setZip(addressbookDTO.zip);
+        addressbookData.setPhone(addressbookDTO.phone);
+        addressbookRepository.save(addressbookData);
         return addressbookData;
     }
 
